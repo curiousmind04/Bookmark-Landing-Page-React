@@ -1,0 +1,78 @@
+.container {
+  padding: 2rem 0 5rem 0;
+  position: relative;
+}
+
+.hero {
+  width: 94%;
+  height: fit-content;
+  margin-inline: auto;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.hero > img {
+  width: 100%;
+  max-width: 22.125rem;
+}
+
+.pattern {
+  background-color: hsl(231, 69%, 60%);
+  height: 12.5rem;
+  width: 82%;
+  border-bottom-left-radius: 6rem;
+  border-top-left-radius: 6rem;
+  position: absolute;
+  right: 0;
+  top: 5.8rem;
+  z-index: -1;
+}
+
+.left {
+  width: 83%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.left > h1 {
+  color: hsl(229, 31%, 21%);
+  font-size: 1.88rem;
+  margin-bottom: 1.2rem;
+}
+
+.left > p {
+  color: hsl(229, 8%, 60%);
+  font-size: 0.94rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.left > .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions > .btn1,
+.actions > .btn2 {
+  width: calc(50% - 0.5rem);
+  height: 3rem;
+  border: none;
+  border-radius: 0.3rem;
+  outline: none;
+  font: inherit;
+  font-weight: 500;
+  font-size: 0.94rem;
+  cursor: pointer;
+}
+
+.actions > .btn1 {
+  background-color: hsl(231, 69%, 60%);
+  color: #fff;
+}
+
+.actions > .btn2 {
+  background-color: hsl(40, 13%, 95%);
+  color: hsl(229, 19%, 34%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
