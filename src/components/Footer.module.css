@@ -39,17 +39,56 @@
   cursor: pointer;
 }
 
-.form > input {
-  padding-left: 1.3rem;
+.form > div {
+  width: 100%;
+  max-width: 20rem;
 }
 
-.form > input::placeholder {
+.form input {
+  padding-left: 1.3rem;
+  padding-right: 3rem;
+}
+
+.form input::placeholder {
   color: hsl(229, 25%, 83%);
 }
 
-.form > .btn {
+.form .btn {
   background-color: hsl(0, 94%, 66%);
   color: #fff;
+}
+
+.form p {
+  display: none;
+}
+
+.form img {
+  display: none;
+}
+
+.error {
+  background-color: hsl(0, 94%, 66%);
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.2rem 0.5rem 0.2rem;
+  text-align: left;
+  position: relative;
+}
+
+.form .error p {
+  display: block;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 500;
+  padding-left: 0.7rem;
+  padding-right: 0.4rem;
+  padding-top: 0.5rem;
+}
+
+.form .error img {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 .bottom {
@@ -96,7 +135,7 @@
 }
 
 @media (hover: hover) {
-  .form > .btn:hover {
+  .form .btn:hover {
     border: 2px solid hsl(0, 94%, 66%);
     background-color: #fff;
     color: hsl(0, 94%, 66%);
@@ -106,6 +145,19 @@
   }
   .bottom > .container > .socials > a:hover > svg > path {
     fill: hsl(0, 94%, 66%);
+  }
+}
+
+@media (max-width: 18.5rem) {
+  .form input::placeholder {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 16rem) {
+  .form input::placeholder {
+    font-size: 0.5rem;
+    color: hsl(229, 31%, 21%);
   }
 }
 
@@ -126,11 +178,15 @@
   .form {
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
   }
-  .form > input {
+  .form > div {
+    width: fit-content;
+  }
+  .form input {
     width: 19rem;
   }
-  .form > .btn {
+  .form .btn {
     width: 8rem;
   }
   .bottom {

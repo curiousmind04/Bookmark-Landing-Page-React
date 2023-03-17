@@ -1,17 +1,52 @@
+import { useState } from "react";
 import classes from "./Footer.module.css";
 
 function Footer() {
+  const [validity, setValidity] = useState(true);
+
+  const inputHandler = () => {
+    setValidity(true);
+  };
+
+  const isValidEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
+
+  const formHandler = (e) => {
+    e.preventDefault();
+    console.log(e.target[0].value);
+    const emailValue = e.target[0].value;
+
+    if (emailValue.length === 0) {
+      setValidity(false);
+    } else if (!isValidEmail(emailValue)) {
+      setValidity(false);
+    } else {
+      setValidity(true);
+      alert("Email is valid!");
+    }
+  };
+
   return (
     <footer>
       <div className={classes.top}>
         <p>35,000+ already joined</p>
         <h2>Stay up-to-date with what we’re doing</h2>
-        <form className={classes.form} noValidate>
-          <input
-            type="email"
-            placeholder="Enter you email address"
-            id="email"
-          />
+        <form className={classes.form} noValidate onSubmit={formHandler}>
+          <div className={validity ? "" : classes.error}>
+            <input
+              type="email"
+              placeholder="Enter you email address"
+              id="email"
+              onChange={inputHandler}
+            />
+            <img src="/images/icon-error.svg" alt="error icon" />
+            <p>Whoops, make sure it's an email</p>
+          </div>
           <button className={classes.btn}>Contact Us</button>
         </form>
       </div>

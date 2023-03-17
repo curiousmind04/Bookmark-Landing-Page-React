@@ -133,6 +133,13 @@
   }
 }
 
+@media (max-width: 19rem) {
+  .tab > .left > .pattern,
+  .tab > .left > .pattern2 {
+    top: 2rem;
+  }
+}
+
 @media (min-width: 50rem) {
   .features {
     width: 100%;
@@ -181,6 +188,8 @@
   .illustration {
     max-width: 33.5rem;
     margin-bottom: 0;
+    display: flex;
+    justify-content: flex-end;
   }
   .illustration > .one {
     max-width: 33.5rem;
@@ -225,6 +234,20 @@
   }
   .tab > .right > .btn {
     display: block;
+  }
+}
+
+@media (min-width: 54rem) {
+  .tab > .left > .pattern,
+  .tab > .left > .pattern2 {
+    height: 18rem;
+  }
+}
+
+@media (min-width: 58rem) {
+  .tab > .left > .pattern,
+  .tab > .left > .pattern2 {
+    height: 20rem;
   }
 }
 

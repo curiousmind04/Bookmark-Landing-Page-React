@@ -120,6 +120,12 @@ header {
   }
 }
 
+@media (max-width: 19rem) {
+  header {
+    padding: 2.5rem 1rem;
+  }
+}
+
 @media (min-width: 50rem) {
   header {
     max-width: 75rem;
