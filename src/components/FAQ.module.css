@@ -1,8 +1,9 @@
 .faq {
   width: 83%;
+  max-width: 34rem;
   margin-inline: auto;
   text-align: center;
-  padding: 0 0 10rem 0;
+  padding: 0 0 7rem 0;
 }
 
 .faq > h1 {
@@ -51,6 +52,10 @@
   padding-right: 2rem;
 }
 
+.questions > .chosen > button {
+  color: hsl(229, 31%, 21%) !important;
+}
+
 .questions > div {
   position: relative;
   border-bottom: 1px solid #ccc;
@@ -78,4 +83,46 @@
 
 .questions > .chosen > svg > path {
   stroke: hsl(0, 94%, 66%);
+}
+
+@media (hover: hover) {
+  .questions > div > button:hover {
+    color: hsl(0, 94%, 66%);
+  }
+  .faq > button:hover {
+    border: 2px solid hsl(231, 69%, 60%);
+    color: hsl(231, 69%, 60%);
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 50rem) {
+  .faq {
+    padding: 0 0 9rem 0;
+  }
+  .faq > h1 {
+    font-size: 2rem;
+    margin-bottom: 1.4rem;
+  }
+  .faq > p {
+    font-size: 1.125rem;
+    padding-inline: 1rem;
+    line-height: 1.7rem;
+    margin-bottom: 3.5rem;
+  }
+  .questions > :first-child {
+    border-top: 1px solid #ccc;
+  }
+  .questions > div > button {
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+  .questions > div > svg {
+    right: 1.5rem;
+  }
+  .questions > div > p {
+    font-size: 1.02rem;
+    line-height: 2.2rem;
+    padding: 1rem 0 2rem 0;
+  }
 }

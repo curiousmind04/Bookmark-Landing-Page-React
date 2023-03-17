@@ -34,28 +34,30 @@
   text-align: center;
 }
 
-.left > h1 {
+.left > div > h1 {
   color: hsl(229, 31%, 21%);
   font-size: 1.88rem;
   margin-bottom: 1.2rem;
 }
 
-.left > p {
+.left > div > p {
   color: hsl(229, 8%, 60%);
   font-size: 0.94rem;
   line-height: 1.5rem;
   margin-bottom: 2rem;
 }
 
-.left > .actions {
+.left > div > .actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1rem;
   align-items: center;
 }
 
 .actions > .btn1,
 .actions > .btn2 {
   width: calc(50% - 0.5rem);
+  max-width: 10.5rem;
   height: 3rem;
   border: none;
   border-radius: 0.3rem;
@@ -75,4 +77,99 @@
   background-color: hsl(40, 13%, 95%);
   color: hsl(229, 19%, 34%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (hover: hover) {
+  .actions > .btn1:hover {
+    border: 2px solid hsl(231, 69%, 60%);
+    color: hsl(231, 69%, 60%);
+    background-color: transparent;
+  }
+  .actions > .btn2:hover {
+    border: 2px solid hsl(229, 19%, 34%);
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 50rem) {
+  .container {
+    display: grid;
+    grid-template-columns: calc(46% - 1.5rem) calc(54% - 1.5rem);
+    column-gap: 3rem;
+    align-items: center;
+    justify-items: center;
+    padding: 5rem 0 3.5rem 0;
+  }
+  .right {
+    width: 100%;
+    grid-column: 2;
+    position: relative;
+  }
+  .hero {
+    width: 100%;
+    max-width: 41.2rem;
+    margin: 0;
+  }
+  .hero > img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .pattern {
+    height: 15rem;
+    width: 72%;
+    border-bottom-left-radius: 12rem;
+    border-top-left-radius: 12rem;
+    top: 6rem;
+  }
+  .left {
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+  }
+  .left > div {
+    max-width: 32rem;
+    padding-left: 1.5rem;
+  }
+  .left > div > h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .left > div > p {
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+    margin-bottom: 2rem;
+  }
+  .left > div > .actions {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .actions > .btn1,
+  .actions > .btn2 {
+    width: 9rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .left {
+    padding-left: 0;
+  }
+  .pattern {
+    height: 18rem;
+    top: 8rem;
+  }
+  .actions > .btn1,
+  .actions > .btn2 {
+    width: 10.5rem;
+  }
+}
+
+@media (min-width: 72rem) {
+  .pattern {
+    height: 22rem;
+    top: 9rem;
+  }
 }

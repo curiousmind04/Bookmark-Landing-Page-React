@@ -3,7 +3,7 @@ import { useState } from "react";
 import classes from "./FAQ.module.css";
 
 function FAQ() {
-  const [question, setQuestion] = useState(1);
+  const [question, setQuestion] = useState();
 
   const openHandler = (e) => {
     if (e.target.innerHTML === "What is Bookmark?") {

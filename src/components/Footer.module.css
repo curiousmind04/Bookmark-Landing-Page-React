@@ -1,0 +1,157 @@
+.top {
+  background-color: hsl(231, 69%, 60%);
+  color: #fff;
+  text-align: center;
+  padding: 4.5rem 2rem 3.5rem 2rem;
+}
+
+.top > p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.top > h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+.form input,
+.form .btn {
+  width: 100%;
+  max-width: 20rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.form > input {
+  padding-left: 1.3rem;
+}
+
+.form > input::placeholder {
+  color: hsl(229, 25%, 83%);
+}
+
+.form > .btn {
+  background-color: hsl(0, 94%, 66%);
+  color: #fff;
+}
+
+.bottom {
+  background-color: hsl(229, 31%, 21%);
+  color: #fff;
+  padding: 2.5rem 2rem;
+}
+
+.bottom > .container {
+  margin-inline: auto;
+  max-width: 69rem;
+}
+
+.bottom > .container > :first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.bottom > .container > :first-child > svg {
+  margin-bottom: 0.5rem;
+}
+
+.bottom > .container > :first-child > a {
+  color: #fff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+}
+
+.bottom > .container > .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.bottom > .container > .socials > a {
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .form > .btn:hover {
+    border: 2px solid hsl(0, 94%, 66%);
+    background-color: #fff;
+    color: hsl(0, 94%, 66%);
+  }
+  .bottom > .container > :first-child > a:hover {
+    color: hsl(0, 94%, 66%);
+  }
+  .bottom > .container > .socials > a:hover > svg > path {
+    fill: hsl(0, 94%, 66%);
+  }
+}
+
+@media (min-width: 50rem) {
+  .top {
+    padding: 4.5rem 2rem;
+  }
+  .top > p {
+    margin-bottom: 2.4rem;
+    letter-spacing: 0.35rem;
+  }
+  .top > h2 {
+    width: 27rem;
+    margin-inline: auto;
+    font-size: 2rem;
+    margin-bottom: 2.2rem;
+  }
+  .form {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .form > input {
+    width: 19rem;
+  }
+  .form > .btn {
+    width: 8rem;
+  }
+  .bottom {
+    padding: 2.2rem 2rem;
+  }
+  .bottom > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bottom > .container > :first-child {
+    flex-direction: row;
+    gap: 2.5rem;
+    margin-bottom: 0;
+  }
+  .bottom > .container > :first-child > svg {
+    margin-bottom: 0rem;
+    margin-right: 1.6rem;
+  }
+  .bottom > .container > :first-child > a {
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+  }
+}

@@ -47,18 +47,21 @@ function Features() {
               <img
                 src="/images/illustration-features-tab-1.svg"
                 alt="tab 1 illustration"
+                className={classes.one}
               />
             )}
             {tab === 2 && (
               <img
                 src="/images/illustration-features-tab-2.svg"
                 alt="tab 2 illustration"
+                className={classes.two}
               />
             )}
             {tab === 3 && (
               <img
                 src="/images/illustration-features-tab-3.svg"
                 alt="tab 3 illustration"
+                className={classes.three}
               />
             )}
           </div>

@@ -12,6 +12,8 @@
 }
 
 .features > p {
+  max-width: 34rem;
+  margin-inline: auto;
   color: hsl(229, 8%, 60%);
   font-size: 0.94rem;
   line-height: 1.5rem;
@@ -26,6 +28,7 @@
   background-color: transparent;
   color: hsl(229, 8%, 60%);
   width: 100%;
+  max-width: 22rem;
   height: 3.6rem;
   outline: none;
   border: none;
@@ -40,7 +43,7 @@
 }
 
 .tabs > .chosen > button {
-  color: hsl(229, 31%, 21%);
+  color: hsl(229, 31%, 21%) !important;
 }
 
 .chosen > div {
@@ -52,11 +55,15 @@
   left: 30%;
 }
 
-.tabs > :first-child {
+.tabs > :first-child > button {
   border-top: 1px solid #ccc;
 }
 
-.tab {
+/* .tab {
+  position: relative;
+} */
+
+.left {
   position: relative;
 }
 
@@ -104,7 +111,7 @@
   display: none;
   background-color: hsl(231, 69%, 60%);
   color: #fff;
-  width: calc(50% - 0.5rem);
+  width: 7.2rem;
   height: 3rem;
   border: none;
   border-radius: 0.2rem;
@@ -113,4 +120,123 @@
   font-weight: 500;
   font-size: 0.94rem;
   cursor: pointer;
+}
+
+@media (hover: hover) {
+  .tabs > div > button:hover {
+    color: hsl(0, 94%, 66%);
+  }
+  .tab > .right > .btn:hover {
+    border: 2px solid hsl(231, 69%, 60%);
+    color: hsl(231, 69%, 60%);
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 50rem) {
+  .features {
+    width: 100%;
+    padding: 4rem 0 9.5rem 0;
+  }
+  .features > h1 {
+    font-size: 2rem;
+    margin-bottom: 1.4rem;
+  }
+  .features > p {
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+    margin-bottom: 2.8rem;
+  }
+  .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tabs > div > button {
+    width: 14.5rem;
+    height: 5rem;
+  }
+  .tabs > :first-child > button {
+    border-top: none;
+  }
+  .chosen > div {
+    width: 100%;
+    left: 0;
+  }
+  .tab {
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: calc(54% - 3.75rem) calc(46% - 3.75rem);
+    column-gap: 7.5rem;
+    align-items: center;
+    justify-items: center;
+  }
+  .left {
+    width: 100%;
+    grid-column: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 1.5rem;
+  }
+  .illustration {
+    max-width: 33.5rem;
+    margin-bottom: 0;
+  }
+  .illustration > .one {
+    max-width: 33.5rem;
+  }
+  .illustration > .two {
+    max-width: 30rem;
+  }
+  .illustration > .three {
+    max-width: 27.5rem;
+  }
+  /* .illustration > img {
+    max-width: 33.5rem;
+  } */
+  .tab > .left > .pattern,
+  .tab > .left > .pattern2 {
+    height: 15rem;
+    width: 88.5%;
+    border-bottom-right-radius: 10rem;
+    border-top-right-radius: 10rem;
+    left: 0;
+    top: 5rem;
+  }
+  .tab > .left > .pattern2 {
+    width: 84%;
+    top: 5.3rem;
+  }
+  .right {
+    width: 100%;
+    text-align: left;
+    grid-column: 2;
+    padding-right: 1.5rem;
+  }
+  .tab > .right > h2 {
+    font-size: 2rem;
+    margin-bottom: 1.4rem;
+  }
+  .tab > .right > p {
+    max-width: 27rem;
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+    margin-bottom: 2rem;
+  }
+  .tab > .right > .btn {
+    display: block;
+  }
+}
+
+@media (min-width: 71.875rem) {
+  .left {
+    padding-left: 0;
+  }
+  .right {
+    padding-right: 0;
+  }
+  .tab > .left > .pattern,
+  .tab > .left > .pattern2 {
+    height: 22rem;
+  }
 }

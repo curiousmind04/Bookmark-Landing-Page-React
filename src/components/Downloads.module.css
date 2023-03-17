@@ -12,6 +12,8 @@
 }
 
 .downloads > p {
+  max-width: 34rem;
+  margin-inline: auto;
   color: hsl(229, 8%, 60%);
   font-size: 0.94rem;
   line-height: 1.5rem;
@@ -20,6 +22,7 @@
 
 .option {
   width: 89%;
+  max-width: 17.6rem;
   margin-inline: auto;
   border-radius: 0.6rem;
   padding: 3rem 0 1.5rem 0;
@@ -62,4 +65,45 @@
   font-size: 0.94rem;
   margin-inline: auto;
   cursor: pointer;
+}
+
+@media (hover: hover) {
+  .option > button:hover {
+    border: 2px solid hsl(231, 69%, 60%);
+    color: hsl(231, 69%, 60%);
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 50rem) {
+  .downloads > h1 {
+    font-size: 2rem;
+    margin-bottom: 1.4rem;
+  }
+  .downloads > p {
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+    margin-bottom: 3.5rem;
+  }
+  .options {
+    max-width: 56.8rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-bottom: 4.5rem;
+  }
+  .options > :first-child {
+    align-self: flex-start;
+  }
+  .options > :nth-child(2) {
+    margin-top: 2.5rem;
+    align-self: start;
+  }
+  .options > :nth-child(3) {
+    margin-top: 5rem;
+  }
+  .option {
+    margin-bottom: 0;
+  }
 }
