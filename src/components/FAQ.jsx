@@ -3,19 +3,45 @@ import { useState } from "react";
 import classes from "./FAQ.module.css";
 
 function FAQ() {
-  const [question, setQuestion] = useState();
+  const [question, setQuestion] = useState(null);
 
   const openHandler = (e) => {
-    if (e.target.innerHTML === "What is Bookmark?") {
+    if (e.target.innerHTML === "What is Bookmark?" && question === 1) {
+      setQuestion(null);
+    } else if (e.target.innerHTML === "What is Bookmark?" && question !== 1) {
       setQuestion(1);
     }
-    if (e.target.innerHTML === "How can I request a new browser?") {
+
+    if (
+      e.target.innerHTML === "How can I request a new browser?" &&
+      question === 2
+    ) {
+      setQuestion(null);
+    } else if (
+      e.target.innerHTML === "How can I request a new browser?" &&
+      question !== 2
+    ) {
       setQuestion(2);
     }
-    if (e.target.innerHTML === "Is there a mobile app?") {
+
+    if (e.target.innerHTML === "Is there a mobile app?" && question === 3) {
+      setQuestion(null);
+    } else if (
+      e.target.innerHTML === "Is there a mobile app?" &&
+      question !== 3
+    ) {
       setQuestion(3);
     }
-    if (e.target.innerHTML === "What about other Chromium browsers?") {
+
+    if (
+      e.target.innerHTML === "What about other Chromium browsers?" &&
+      question === 4
+    ) {
+      setQuestion(null);
+    } else if (
+      e.target.innerHTML === "What about other Chromium browsers?" &&
+      question !== 4
+    ) {
       setQuestion(4);
     }
   };
